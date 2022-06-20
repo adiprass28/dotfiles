@@ -33,11 +33,11 @@ let g:mapleader=','
 
 set relativenumber number
 
-nnoremap / /\v
-vnoremap / /\v
-nnoremap ? ?\v
-vnoremap ? ?\v
-map <leader>/ :nohl<CR>
+" nnoremap / /\v
+" vnoremap / /\v
+" nnoremap ? ?\v
+" vnoremap ? ?\v
+nnoremap <leader>/ :nohl<CR>
 set hlsearch
 set incsearch
 set ignorecase
@@ -64,29 +64,31 @@ nnoremap <leader>da ggVGd
 set splitbelow             " Open new windows below the current window.
 set splitright             " Open new windows right of the current window.
 
-nmap qa :wqa<cr>
-nmap qf :q!<cr>
-nmap qq :q<cr>
-nmap qw :wq<cr>
+nnoremap qa :wqa<cr>
+nnoremap qf :q!<cr>
+nnoremap qq :q<cr>
+nnoremap qw :wq<cr>
 
-map <leader>j :bnext<cr>
-map <leader>k :bprevious<cr>
+nnoremap \\ :ls<cr>
+nnoremap ]\ :bnext<cr>
+nnoremap [\ :bprevious<cr>
 
 " Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>te :tabedit 
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove 
-map <leader>l :tabnext<cr>
-map <leader>h :tabprev<cr>
-map <leader>L :tablast<cr>
-map <leader>H :tabfirst<cr>
+nnoremap <leader>tn :tabnew<cr>
+nnoremap <leader>te :tabedit 
+nnoremap <leader>to :tabonly<cr>
+nnoremap <leader>tc :tabclose<cr>
+nnoremap <leader>tm :tabmove 
+nnoremap ]= :tabnext<cr>
+nnoremap [= :tabprev<cr>
+nnoremap ]+ :tablast<cr>
+nnoremap [+ :tabfirst<cr>
 
-map <leader>m :vsplit term://bash<CR> :set nonu nornu<cr> :set scl=no<cr>i
+nnoremap <leader>> :vsplit term://fish<CR> :set nonu nornu<cr> :set scl=no<cr>i
+nnoremap <leader>$ :vsplit term://bash<CR> :set nonu nornu<cr> :set scl=no<cr>i
 " map <leader>m :vertical terminal<cr>
-tnoremap <leader>q <c-\><c-n>:q!<cr>
-nnoremap <leader>q :q!<cr>
+tnoremap qq <c-\><c-n>:q!<cr>
+" nnoremap <leader>q :q!<cr>
 tnoremap <a-h> <C-\><C-N><C-w>h
 tnoremap <Esc> <C-\><C-n>
 " set termwinsize=10x0
@@ -337,11 +339,4 @@ nmap <leader>gc :G commit<cr>
 " emoji shotcuts (from https://emojipedia.org/) {{{
 " people
 ab :smile: 🙂
-ab :neutral: 😐
-ab :kissing: 😘
-ab :exercise: 😅
-ab :winking: 😉
-
-ab :heart: ❤️ 
-ab :watermelon: 🍉
 " }}}
